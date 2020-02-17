@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: black; }
+  html .title, body .title {
+    margin: 0 auto;
+    padding: 100px 0;
+    width: 800px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    line-height: 36px; }
+    html .title span, body .title span {
+      display: inline-block;
+      animation-name: dance;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      opacity: 0;
+      animation-fill-mode: forwards; }
+
+@keyframes dance {
+  0% {
+    transform: translateY(-20px) translateX(0px); }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 1; } }
+
+/*# sourceMappingURL=index.css.map */
