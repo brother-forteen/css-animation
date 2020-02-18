@@ -34,6 +34,7 @@ html, body{
     }
 
     &:hover{
+      box-shadow: 0 0 5px 5px rgba(128, 255, 255, 0.3);
       &:before{
         transform: translateX(100%);
       }
