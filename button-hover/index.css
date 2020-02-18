@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: black;
+  text-align: center; }
+  html .button, body .button {
+    --hue: 171;
+    --ease-in-duration: 0.25s;
+    --ease-in-exponential: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    --ease-out-duration: 0.65s;
+    --ease-out-delay: var(--ease-in-duration);
+    --ease-out-exponential: cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    margin: 300px auto;
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+    font-size: 24px;
+    outline: none;
+    background: transparent;
+    border: 1px solid hsl(var(--hue), 100%, 41%);
+    overflow: hidden; }
+    html .button .border, body .button .border {
+      position: absolute;
+      transform: scaleX(0); }
+      html .button .border.border-left, body .button .border.border-left {
+        width: 0;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-left: 2px solid hsl(var(--hue), 100%, 41%);
+        transform-origin: bottom;
+        transition: var(--ease-out-duration) var(--ease-out-delay) var(--ease-out-exponential); }
+      html .button .border.border-top, body .button .border.border-top {
+        width: 100%;
+        height: 0;
+        left: 0;
+        top: 0;
+        border-top: 2px solid hsl(var(--hue), 100%, 41%);
+        transform-origin: left;
+        transition: var(--ease-in-duration) var(--ease-in-exponential); }
+      html .button .border.border-right, body .button .border.border-right {
+        width: 0;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+        border-right: 2px solid hsl(var(--hue), 100%, 41%);
+        transform-origin: bottom;
+        transition: var(--ease-in-duration) var(--ease-in-exponential); }
+      html .button .border.border-bottom, body .button .border.border-bottom {
+        width: 100%;
+        height: 0;
+        left: 0;
+        bottom: 0;
+        border-bottom: 2px solid hsl(var(--hue), 100%, 41%);
+        transform-origin: left;
+        transition: var(--ease-out-duration) var(--ease-out-delay) var(--ease-out-exponential); }
+    html .button:hover .border-left, body .button:hover .border-left {
+      transform: scaleX(1);
+      transition: var(--ease-in-duration) var(--ease-in-exponential); }
+    html .button:hover .border-top, body .button:hover .border-top {
+      transform: scaleX(1);
+      transition: var(--ease-out-duration) var(--ease-out-delay) var(--ease-out-exponential); }
+    html .button:hover .border-right, body .button:hover .border-right {
+      height: 100%;
+      transform: scaleX(1);
+      transition: var(--ease-out-duration) var(--ease-out-delay) var(--ease-out-exponential); }
+    html .button:hover .border-bottom, body .button:hover .border-bottom {
+      transform: scaleX(1);
+      transition: var(--ease-in-duration) var(--ease-in-exponential); }
+
+/*# sourceMappingURL=index.css.map */
