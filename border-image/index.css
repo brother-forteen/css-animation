@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); }
+  html body, body body {
+    padding-top: 20px; }
+  html p, body p {
+    color: #fff;
+    margin-bottom: 20px; }
+  html .border-image, body .border-image {
+    margin: 0 auto 20px;
+    width: 200px;
+    height: 100px;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-image-source: linear-gradient(45deg, gold, deeppink);
+    border-image-slice: 1;
+    border-image-repeat: stretch; }
+  html .background-image, body .background-image {
+    position: relative;
+    margin: 0 auto 20px;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, gold, deeppink); }
+    html .background-image:after, body .background-image:after {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      content: '';
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      background: #fff; }
+  html .background-clip, body .background-clip {
+    margin: 0 auto 20px;
+    width: 200px;
+    height: 100px;
+    border: solid 10px transparent;
+    border-radius: 10px;
+    background-image: linear-gradient(#fee, #fee), linear-gradient(to right, green, gold);
+    background-origin: border-box;
+    background-clip: content-box, border-box; }
+  html .border-image-overflow, body .border-image-overflow {
+    position: relative;
+    margin: 0 auto 20px;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden; }
+    html .border-image-overflow:before, body .border-image-overflow:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-width: 10px;
+      border-style: solid;
+      border-radius: 10px;
+      border-image-source: linear-gradient(45deg, gold, deeppink);
+      border-image-slice: 1;
+      border-image-repeat: stretch;
+      box-sizing: border-box; }
+  html .border-image-clip-path, body .border-image-clip-path {
+    margin: 0 auto;
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border: 10px solid;
+    border-image: linear-gradient(45deg, gold, deeppink) 1;
+    clip-path: inset(0 round 10px);
+    animation: border-animate linear 1s alternate infinite; }
+
+@keyframes border-animate {
+  0% {
+    filter: hue-rotate(72deg); }
+  25% {
+    filter: hue-rotate(144deg); }
+  50% {
+    filter: hue-rotate(216deg); }
+  75% {
+    filter: hue-rotate(288deg); }
+  100% {
+    filter: hue-rotate(0deg); } }
+
+/*# sourceMappingURL=index.css.map */
